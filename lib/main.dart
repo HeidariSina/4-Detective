@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './pages/fisrtpage.dart';
+import './theme/theme.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,15 +13,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Color.fromARGB(255, 0, 63, 95),
-          titleTextStyle: TextStyle(color: Colors.white),
-          iconTheme: IconThemeData(color: Colors.white),
-        ),
-        brightness: Brightness.dark,
-        scaffoldBackgroundColor: Color.fromARGB(255, 0, 24, 44),
-      ),
+      theme: MainTheme().themeData,
+      title: 'Main Page',
       home: Scaffold(
         appBar: AppBar(
           title: const Align(
