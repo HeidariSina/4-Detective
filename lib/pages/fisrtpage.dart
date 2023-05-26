@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import './help.dart';
+
 class MyFirtsPage extends StatefulWidget {
   const MyFirtsPage({super.key});
 
@@ -57,7 +59,12 @@ class _MyFirtsPageState extends State<MyFirtsPage> {
           width: MediaQuery.of(context).size.width * 0.5,
           height: 40,
           child: ElevatedButton(
-            onPressed: null,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HelpingPage()),
+              );
+            },
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all<Color>(
               const Color.fromARGB(255, 1, 94, 86),
